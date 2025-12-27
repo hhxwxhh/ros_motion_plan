@@ -1,5 +1,6 @@
 本项目的默认算法选择是Fuzzy Adaptive STSMC + APF，如需更改成其他算法，请将~\ros_motion_planning-master\src\core\controller\pid_controller\src此地址中的pid_controller.cpp的内容替换为此文件夹的其他算法的pid_controller.cpp文件的内容，重新编译后使用。
-本项目来源于GitHub上的开源项目（https://github.com/ai-winter/ros_motion_planning）。本人对此项目做了改进逐步实现了以下核心功能与算法迭代：
+本项目来源于GitHub上的开源项目 https://github.com/ai-winter/ros_motion_planning
+本人对此项目做了改进逐步实现了以下核心功能与算法迭代：
 1.基础轨迹跟踪复现：基于ros_motion_planning框架，复现了基于A*全局规划与PID局部控制的导航系统，分析了PID算法在理想环境下的性能基准。
 2.复杂干扰环境构建：开发了force_disturbance.py干扰注入脚本，能够模拟随机强度的侧向风载及纵向阻力波动，构建了高保真的物理干扰测试环境。
 3.鲁棒滑模控制（SMC）：针对PID抗扰性差的问题，设计了基于指数趋近律的滑模控制器。利用滑模变结构控制对匹配干扰的不变性，显著提升了机器人在强干扰下的轨迹保持能力。
