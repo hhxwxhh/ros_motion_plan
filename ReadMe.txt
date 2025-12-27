@@ -1,0 +1,1 @@
+本项目的默认算法选择是Fuzzy Adaptive STSMC + APF，如需更改成其他算法，请将~\ros_motion_planning-master\src\core\controller\pid_controller\src此地址中的pid_controller.cpp的内容替换为此文件夹的其他算法的pid_controller.cpp文件的内容，重新编译后使用。
